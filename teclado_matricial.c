@@ -54,14 +54,19 @@ void init_gpio() {
 
 // Função para tocar o buzzer por uma duração específica (em milissegundos)
 
-Sugestão: ADICIONE A FUNÇÃO DO BUZZER AQUI{
+void Tocar_buzzer(int duracao_ms) {
+    int tempo = duracao_ms;  // Duração total em milissegundos
     
+    while (tempo > 0) {
+        gpio_put(BUZZER, true);  // Liga o buzzer
+        sleep_ms(1);             // Mantém o buzzer ligado por 1ms
+        tempo -= 1;              // Diminui o tempo restante
 
-
-
-
+        gpio_put(BUZZER, false); // Desliga o buzzer
+        sleep_ms(3);             // Aguarda 3ms antes de repetir
+        tempo -= 3;              // Diminui o tempo restante
+    }
 }
-
 
 // Função para verificar as teclas pressionadas no teclado matricial
 char scan_keypad() {
@@ -120,7 +125,7 @@ int main() {
         if (key != 0) {  // Verifica se alguma tecla foi pressionada
             CHAMAR FUNÇÃO DE CONTROLE DE LEDS/ Parametro -->>(key);  // Controla LEDs e buzzer com base na tecla pressionada
             if (key == '#') {
-            CHAMAR FUNÇÃO DO BUZZER  // Toca o buzzer por 1000ms
+            Tocar_buzzer(1000);   // Toca o buzzer por 1000ms
             }
         }
 
