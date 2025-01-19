@@ -53,7 +53,6 @@ void init_gpio() {
 }
 
 // Função para tocar o buzzer por uma duração específica (em milissegundos)
-
 void Tocar_buzzer(int duracao_ms) {
     int tempo = duracao_ms;  // Duração total em milissegundos
     
@@ -72,33 +71,39 @@ void Tocar_buzzer(int duracao_ms) {
 char scan_keypad() {
     for (int row = 0; row < ROWS; row++) {
         gpio_put(row_pins[row], 0);  // Ativa a linha atual (nível baixo)
-
         for (int col = 0; col < COLS; col++) {
             if (!gpio_get(col_pins[col])) {  // Verifica se a tecla na coluna atual está pressionada
                 char key = KEY_MAP[row * COLS + col];  // Obtém o valor da tecla pressionada
-
                 // Aguarda o debounce (evita leituras repetidas)
                 sleep_ms(500);
                 return key;  // Retorna o valor da tecla pressionada
             }
         }
-
         gpio_put(row_pins[row], 1);  // Desativa a linha atual (retorna ao nível alto)
     }
-
     return 0;  // Retorna 0 se nenhuma tecla foi pressionada
 }
 
-// Função para ligar e desligar LEDs
+// Função para ligar LEDs individualmente
 
-
-Sugestao: ADICIONE A FUNÇAO DE CONTROLE DE LEDS AQUI {
-
-
-
-
-  
+// Funções para ligar leds em grupos de 2 cores
+void ligar_magenta () { // Liga as cores azul e vermelho
+  gpio_put(GREEN_LED, false);
+  gpio_put(BLUE_LED, true);
+  gpio_put(RED_LED, true);
 }
+void ligar_amarelo () { // Liga as cores verde e vermelho
+  gpio_put(GREEN_LED, true);
+  gpio_put(BLUE_LED, false);
+  gpio_put(RED_LED, true);
+}
+void ligar_ciano () { // Liga as cores verde e azul
+  gpio_put(GREEN_LED, true);
+  gpio_put(BLUE_LED, true);
+  gpio_put(RED_LED, false);
+}
+
+//Funções para ligar/desligar todas as cores
 
 
 // Função para mostrar o menu
@@ -112,7 +117,6 @@ void menu() {
     printf("# - Tocar o Buzzer\n");
 }
 
-
 int main() {
     stdio_init_all();  // Inicializa a entrada/saída padrão
     init_gpio();       // Configura os GPIOs
@@ -123,12 +127,11 @@ int main() {
         char key = scan_keypad();  // Lê a tecla pressionada no teclado matricial
 
         if (key != 0) {  // Verifica se alguma tecla foi pressionada
-            CHAMAR FUNÇÃO DE CONTROLE DE LEDS/ Parametro -->>(key);  // Controla LEDs e buzzer com base na tecla pressionada
+            // CHAMAR FUNÇÃO DE CONTROLE DE LEDS/ Parametro -->>(key);  // Controla LEDs e buzzer com base na tecla pressionada
             if (key == '#') {
             Tocar_buzzer(1000);   // Toca o buzzer por 1000ms
             }
         }
-
         sleep_ms(100);  // Aguarda um pequeno intervalo antes da próxima verificação
     }
 }
