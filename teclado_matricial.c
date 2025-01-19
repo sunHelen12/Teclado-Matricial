@@ -97,7 +97,11 @@ void ligar_amarelo () { // Liga as cores verde e vermelho
   gpio_put(BLUE_LED, false);
   gpio_put(RED_LED, true);
 }
-
+void ligar_ciano () { // Liga as cores verde e azul
+  gpio_put(GREEN_LED, true);
+  gpio_put(BLUE_LED, true);
+  gpio_put(RED_LED, false);
+}
 
 //Funções para ligar/desligar todas as cores
 
