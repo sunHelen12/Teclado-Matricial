@@ -83,15 +83,11 @@
     <tr>
       <td>D</td>
       <td>Liga todos os LEDs</td>
-    </tr>   
-	<tr>
-      <td>*</td>
-      <td>Desliga todos os LEDs</td>
-    </tr>
-	   <tr>
+    </tr> 	
+     <tr>
       <td>#</td>
       <td>Ativa o buzzer</td>
-    </tr>
+      </tr>
   </tbody>
 </table>
 
