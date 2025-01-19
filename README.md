@@ -91,5 +91,15 @@
   </tbody>
 </table>
 
-  <h2>Link do Vídeo do Projeto</h2>
+<h2>Link do Vídeo do Projeto</h2>
+
+<h3>Wokwi Web</h3>
+<p>Google Drive: https://drive.google.com/file/d/1rtCsfEmN_9zEyMdBg4yoZL89ipi_Qxvp/view?usp=sharing</p>
+
+<p>YouTube: https://youtu.be/tsf64rYX4GQ</p>
+
+<h3>Wokwi integrado ao VSCode</h3>
+
+<p>Google Drive: https://drive.google.com/file/d/1cXbM5-TMvTPYaASrBH3-spZ_24XX4y1l/view?usp=sharing</p>
+<p>YouTube: https://youtu.be/OrN_K1Se51M</p>
 
