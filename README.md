@@ -14,7 +14,16 @@
 <h2>Funcionalidades</h2>
 
 <ul>
-	<li><strong>Controle de LEDs RGB:  </strong>Cada tecla no 		teclado matricial está associada a uma ação específica, como 		ativar uma cor específica do LED RGB ou todas as cores ao 		mesmo tempo.
+	<li><strong>Controle de LEDs RGB:  </strong>Cada tecla no 		teclado matricial está associada a uma ação específica, como 		ativar cores específicas do LED RGB ou todas as cores ao 		mesmo tempo.
+	<ul>
+      <li>LED Vermelho</li>
+      <li>LED Verde</li>
+	  <li>LED Azul</li>
+	  <li>LED Magenta (LED Azul + LED Vermelho) </li>
+	  <li>LED Ciano (LED Azul + LED Verde)</li>
+	  <li>LED Amarelo (LED Verde + LED Vermelho)</li>
+	  <li>LED Branco (LED Verde + LED Vermelho + LED Azul)</li>
+    </ul>
 	</li>
 	<li><strong>Emissão de sinal sonoro pelo buzzer: </strong>Uma tecla específica ativa o buzzer, que pode emitir sinais com duração ou padrões ajustáveis.
 	</li>
@@ -89,17 +98,25 @@
       <td>C</td>
       <td>Liga o LED verde</td>
     </tr>
+	<tr>
+	   <td></td>
+	   <td>Liga o LED magenta</td>
+    </tr>
+	<tr>
+	   <td></td>
+	   <td>Liga o LED ciano</td>
+    </tr>
+    <tr>
+	<td></td>
+	<td>Liga o LED amarelo</td>
+   </tr>
     <tr>
       <td>D</td>
       <td>Liga todos os LEDs</td>
     </tr>
     <tr>
       <td>#</td>
-      <td>Ativa o buzzer por 1 segundo</td>
-    </tr>
-    <tr>
-      <td>*</td>
-      <td>Sem função definida</td>
+      <td>Ativa o buzzer</td>
     </tr>
   </tbody>
 </table>
