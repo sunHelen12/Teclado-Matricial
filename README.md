@@ -1,6 +1,6 @@
 ﻿<h2>Teclado-Matricial-Embarcatech 💻</h2> 
 
-Este projeto foi desenvolvido como parte do programa Embarcatech e tem como objetivo a implementação de um sistema de controle de pinos GPIO utilizando um teclado matricial 4x4. O projeto foi simulado no ambiente online Wokwi e utiliza a plataforma de desenvolvimento Raspberry Pi Pico W.
+Este projeto foi desenvolvido como parte do programa Embarcatech e tem como objetivo a implementação de um sistema de controle de pinos GPIO utilizando um teclado matricial 4x4. O projeto foi simulado no ambiente online Wokwi e também o Wokwi integrado ao Visual Studio Code.
 
 Descrição do Projeto
 
