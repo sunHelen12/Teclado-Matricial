@@ -41,38 +41,8 @@
 </ul>
 
 <h2>Funções e Membros</h2>
-<table border="1">
-    <tr>
-        <td>Líder: </td>
-        <td>Mariana Barretto</td>
-    </tr>
-	 </tr>
-       <tr>
-        <td>Criação do Repositório</td>
-        <td>Mariana Barretto</td>
-    </tr>
-    <tr>
-        <td> Diagram.json</td>
-        <td>Alexandro Soares</td>
-    </tr>
-        <tr>
-        <td>Buzzer</td>
-        <td>Lucas Moreira</td>
-    </tr>
-    <tr>
-        <td>Readme.md</td>
-        <td>Helen Santos</td>
-    </tr>
-        <tr>
-        <td>LEDs e Lógica do Código</td>
-        <td>Edna Rodrigues e Israel Falcão</td>   
-    <tr>
-        <td>Teclado e Lógica do Código</td>
-        <td>Daniel Santos, Ylo Bittencourt e Kauan Farias</td>
-    </tr>
-   </table>
 
-   <h2>Imagem</h2>
+<h2>Imagem</h2>
    
   ![projeto](https://github.com/user-attachments/assets/be11d601-343a-49a1-b04c-38634f7452c8)
 
@@ -98,23 +68,27 @@
       <td>C</td>
       <td>Liga o LED verde</td>
     </tr>
-	<tr>
-	   <td></td>
-	   <td>Liga o LED magenta</td>
+     <tr>
+	<td>1</td>
+        <td>Liga o LED magenta</td>
     </tr>
-	<tr>
-	   <td></td>
-	   <td>Liga o LED ciano</td>
+     <tr>
+	 <td>2</td>
+	 <td>Liga o LED ciano</td>
     </tr>
     <tr>
-	<td></td>
+	<td>3</td>
 	<td>Liga o LED amarelo</td>
    </tr>
     <tr>
       <td>D</td>
       <td>Liga todos os LEDs</td>
+    </tr>   
+	<tr>
+      <td>*</td>
+      <td>Desliga todos os LEDs</td>
     </tr>
-    <tr>
+	   <tr>
       <td>#</td>
       <td>Ativa o buzzer</td>
     </tr>
