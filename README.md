@@ -44,5 +44,6 @@ Este projeto foi desenvolvido como parte do programa Embarcatech e tem como obje
    </table>
 
    <h2>Imagem</h2>
-    ![image](https://github.com/user-attachments/assets/1c7bf21c-26d2-461a-bebf-5b4c974f7af5)
+   
+  ![projeto](https://github.com/user-attachments/assets/be11d601-343a-49a1-b04c-38634f7452c8)
 
