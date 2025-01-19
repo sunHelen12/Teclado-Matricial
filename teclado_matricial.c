@@ -87,7 +87,11 @@ char scan_keypad() {
 // Função para ligar LEDs individualmente
 
 // Funções para ligar leds em grupos de 2 cores
-
+void ligar_magenta () { // Liga os LEDs azul e vermelho
+  gpio_put(GREEN_LED, false);
+  gpio_put(BLUE_LED, true);
+  gpio_put(RED_LED, true);
+}
 
 //Funções para ligar/desligar todas as cores
 
