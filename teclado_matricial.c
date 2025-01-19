@@ -85,25 +85,70 @@ char scan_keypad() {
 }
 
 // Função para ligar LEDs individualmente
+void ligar_verde () { // Liga a cor verde
+  gpio_put(GREEN_LED, true);
+  gpio_put(BLUE_LED, false);
+  gpio_put(RED_LED, false);
+  sleep_ms(200); // Mantem o led ligado por 0,2 segundos
+  gpio_put(GREEN_LED, false); // Em seguida desliga
+}
+
+void ligar_azul () { // Liga a cor azul
+  gpio_put(GREEN_LED, false);
+  gpio_put(BLUE_LED, true);
+  gpio_put(RED_LED, false);
+  sleep_ms(200); // Mantem o led ligado por 0,2 segundos
+  gpio_put(BLUE_LED, false); // Em seguida desliga
+}
+
+void ligar_vermelho () { // Liga a cor vermelha
+  gpio_put(GREEN_LED, false);
+  gpio_put(BLUE_LED, false);
+  gpio_put(RED_LED, true);
+  sleep_ms(200); // Mantem o led ligado por 0,2 segundos
+  gpio_put(RED_LED, false); // Em seguida desliga
+}
 
 // Funções para ligar leds em grupos de 2 cores
 void ligar_magenta () { // Liga as cores azul e vermelho
   gpio_put(GREEN_LED, false);
   gpio_put(BLUE_LED, true);
   gpio_put(RED_LED, true);
+  sleep_ms(200); // Mantem os leds ligado por 0,2 segundos
+  gpio_put(RED_LED, false); // Em seguida desliga
+  gpio_put(BLUE_LED, false); // Em seguida desliga
 }
 void ligar_amarelo () { // Liga as cores verde e vermelho
   gpio_put(GREEN_LED, true);
   gpio_put(BLUE_LED, false);
   gpio_put(RED_LED, true);
+  sleep_ms(200); // Mantem os leds ligado por 0,2 segundos
+  gpio_put(RED_LED, false); // Em seguida desliga
+  gpio_put(GREEN_LED, false); // Em seguida desliga
 }
 void ligar_ciano () { // Liga as cores verde e azul
   gpio_put(GREEN_LED, true);
   gpio_put(BLUE_LED, true);
   gpio_put(RED_LED, false);
+  sleep_ms(200); // Mantem os leds ligado por 0,2 segundos
+  gpio_put(BLUE_LED, false); // Em seguida desliga
+  gpio_put(GREEN_LED, false); // Em seguida desliga
 }
 
 //Funções para ligar/desligar todas as cores
+void ligar_todos_leds() { // Liga todas as cores
+    gpio_put(GREEN_LED, true);
+    gpio_put(BLUE_LED, true);
+    gpio_put(RED_LED, true);
+    sleep_ms(200); // Mantem os leds ligado por 0,2 segundos
+    desligar_todos_leds(); // DESLIGA TODOS
+}
+
+void desligar_todos_leds() { // Desliga todas as cores
+    gpio_put(GREEN_LED, false);
+    gpio_put(BLUE_LED, false);
+    gpio_put(RED_LED, false);
+}
 
 
 // Função para mostrar o menu
@@ -114,6 +159,9 @@ void menu() {
     printf("B - Ligar LED Azul\n");
     printf("C - Ligar LED Verde\n");
     printf("D - Ligar Todos os LEDs\n");
+    printf("1 - Ligar LED Magenta\n");
+    printf("2 - Ligar LED Ciano\n");
+    printf("3 - Ligar LED Amarelo\n");
     printf("# - Tocar o Buzzer\n");
 }
 
@@ -127,10 +175,51 @@ int main() {
         char key = scan_keypad();  // Lê a tecla pressionada no teclado matricial
 
         if (key != 0) {  // Verifica se alguma tecla foi pressionada
-            // CHAMAR FUNÇÃO DE CONTROLE DE LEDS/ Parametro -->>(key);  // Controla LEDs e buzzer com base na tecla pressionada
-            if (key == '#') {
-            Tocar_buzzer(1000);   // Toca o buzzer por 1000ms
-            }
+            switch (key) {
+            case 'A':  // Liga o LED vermelho
+                ligar_vermelho();
+                printf("LED Vermelho ligado.\n");
+                break;
+
+            case 'B':  // Liga o LED azul
+                ligar_azul();
+                printf("LED Azul ligado.\n");
+                break;
+
+            case 'C':  // Liga o LED verde
+                ligar_verde();
+                printf("LED Verde ligado.\n");
+                break;
+
+            case 'D':  // Liga todos os LEDs
+                ligar_todos_leds();
+                printf("Todos os LEDs ligados.\n");
+                break;
+            
+            case '1':  // Liga LED magenta
+                ligar_magenta();
+                printf("Todos os LEDs magenta ligado.\n");
+                break;
+
+            case '2':  // Liga LED ciano
+                ligar_ciano();
+                printf("Todos os LED ciano ligado.\n");
+                break;
+
+            case '3':  // Liga LED amarelo
+                ligar_amarelo();
+                printf("Todos os LED amarelo ligado.\n");
+                break;
+
+            case '#':  // Toca o buzzer
+                Tocar_buzzer(1000);
+                printf("Buzzer tocando...\n");
+                break;
+
+            default:
+                printf("Tecla %c pressionada, sem acao atribuida.\n", key);
+                break;
+            } 
         }
         sleep_ms(100);  // Aguarda um pequeno intervalo antes da próxima verificação
     }
