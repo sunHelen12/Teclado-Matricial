@@ -46,6 +46,8 @@
   <li><strong>Pico SDK</strong> - O kit de desenvolvimento de software da Raspberry Pi Pico para programar o RP2040.</li>
   <li><strong>Linguagem de Programação C</strong> - Utilizada para o desenvolvimento do código do projeto.</li>
   <li><strong>GPIO (General Purpose Input/Output)</strong> - Para interação com hardware externo, como o teclado matricial, LEDs e buzzer.</li>
+   <li><strong>Git</strong>: Sistema de controle de versão para gerenciar o código-fonte.</li>
+   <li><strong>GitHub</strong>: Plataforma para hospedar e colaborar no repositório do projeto.</li>
   <li><strong>Teclado Matricial 4x4</strong> - Um componente para input de dados pelo usuário.</li>
   <li><strong>LED RGB</strong> - Utilizado para fornecer feedback visual com diferentes cores.</li>
   <li><strong>Buzzer</strong> - Para emitir sons de alerta ou feedback.</li>
@@ -103,6 +105,38 @@
   </tbody>
 </table>
 
+<h2>Funções e Membros</h2>
+<table border="1">
+    <tr>
+        <td>Líder: </td>
+        <td>Mariana Barretto</td>
+    </tr>
+	 </tr>
+       <tr>
+        <td>Criação do Repositório</td>
+        <td>Mariana Barretto</td>
+    </tr>
+    <tr>
+        <td> Diagram.json</td>
+        <td>Alexandro Soares</td>
+    </tr>
+        <tr>
+        <td>Buzzer</td>
+        <td>Lucas Moreira</td>
+    </tr>
+    <tr>
+        <td>README.md</td>
+        <td>Helen Santos</td>
+    </tr>
+        <tr>
+        <td>LEDs e Lógica do Código</td>
+        <td>Edna Rodrigues e Israel Falcão</td>   
+    <tr>
+        <td>Teclado e Lógica do Código</td>
+        <td>Daniel Santos, Ylo Bittencourt e Kauan Farias</td>
+    </tr>
+   </table>
+
 <h2>Link do Vídeo do Projeto</h2>
 
 <h3>Wokwi Web</h3>
@@ -128,7 +162,7 @@
     </ol>
     <h2>Simulação no Wokwi</h2>
     <ol>
-        <li>Abra o site do <a href="https://wokwi.com/" target="_blank">Wokwi</a>.</li>
+        <li>Abra o site do <a href="https://wokwi.com/projects/420556179718893569" target="_blank">Wokwi</a> com o projeto.</li>
         <li>Faça login ou crie uma conta gratuita.</li>
         <li>Crie um novo projeto simulando o hardware:
             <ul>
