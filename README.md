@@ -113,7 +113,7 @@
     </tr>
 	 </tr>
        <tr>
-        <td>Criação do Repositório</td>
+        <td>Criação do Repositório e Gravação dos Vídeos</td>
         <td>Mariana Barretto</td>
     </tr>
     <tr>
