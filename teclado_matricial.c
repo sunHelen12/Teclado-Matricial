@@ -193,22 +193,22 @@ int main() {
 
             case 'D':  // Liga todos os LEDs
                 ligar_todos_leds();
-                printf("Todos os LEDs ligados.\n");
+                printf("Todos os LEDs ligados (Branco).\n");
                 break;
             
             case '1':  // Liga LED magenta
                 ligar_magenta();
-                printf("Todos os LEDs magenta ligado.\n");
+                printf("LEDs azul e vermelho ligados (Magenta).\n");
                 break;
 
             case '2':  // Liga LED ciano
                 ligar_ciano();
-                printf("Todos os LED ciano ligado.\n");
+                printf("LEDs verde e azul ligados (Ciano).\n");
                 break;
 
             case '3':  // Liga LED amarelo
                 ligar_amarelo();
-                printf("Todos os LED amarelo ligado.\n");
+                printf("LEDs verde e vermelho ligados (Amarelo).\n");
                 break;
 
             case '#':  // Toca o buzzer
